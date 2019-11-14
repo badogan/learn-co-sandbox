@@ -1,0 +1,46 @@
+class Dog  
+  def initialize(breed, name)  
+    # Instance variables  
+    @breed = breed  
+    @name = name  
+  end  
+  
+  def bark  
+    puts 'Ruff! Ruff!'  
+  end  
+  
+  def display  
+    puts "I am of #{@breed} breed and my name is #{@name}"  
+  end  
+end  
+  
+# make an object  
+# Objects are created on the heap  
+d = Dog.new('Labrador', 'Benzy') 
+
+class BasriModifyNumbers
+    def initialize(array)  
+        # Instance variables  
+        @array = array  
+    end  
+
+    def Multiply
+        multiplied=1
+        @array.each {|item|
+            multiplied *= item
+        }
+        multiplied
+    end
+
+    def Add
+        added=0
+        @array.each {|item|
+            added += item
+        }
+        added
+    end
+end
+
+test = BasriModifyNumbers.new([1,2,3,4,5,6])
+puts test.Multiply
+puts test.Add
