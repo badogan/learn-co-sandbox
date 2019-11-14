@@ -39,8 +39,14 @@ class BasriModifyNumbers
         }
         added
     end
+    
+    def SubtractFrom100
+        100 - self.Add
+    end
+    
 end
 
 test = BasriModifyNumbers.new([1,2,3,4,5,6])
 puts test.Multiply
 puts test.Add
+puts test.SubtractFrom100
