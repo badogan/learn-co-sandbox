@@ -1,27 +1,8 @@
-class Dog  
-  def initialize(breed, name)  
-    # Instance variables  
-    @breed = breed  
-    @name = name  
-  end  
-  
-  def bark  
-    puts 'Ruff! Ruff!'  
-  end  
-  
-  def display  
-    puts "I am of #{@breed} breed and my name is #{@name}"  
-  end  
-end  
-  
-# make an object  
-# Objects are created on the heap  
-d = Dog.new('Labrador', 'Benzy') 
-
 class BasriModifyNumbers
-    def initialize(array)  
+    def initialize(array,some_number_to_check)  
         # Instance variables  
         @array = array  
+        @some_number_to_check = some_number_to_check
     end  
 
     def Multiply
@@ -40,13 +21,34 @@ class BasriModifyNumbers
         added
     end
     
+    def Add2
+        @array.reduce(0) {|sum,n| sum+n}
+    end
+
     def SubtractFrom100
         100 - self.Add
     end
     
+    def DoesItExist
+      @array.any? { |item| item==@some_number_to_check }
+    end
+
+    def HowMany
+      @array.count {|item| item==@some_number_to_check}
+    end
+
+    def FindAll
+      @array.find_all {|item| item==@some_number_to_check}
+    end
 end
 
-test = BasriModifyNumbers.new([1,2,3,4,5,6])
+sample_array = [1,2,3,4,5,6,4,44]
+some_number_to_check = 4
+test = BasriModifyNumbers.new(sample_array,some_number_to_check)
 puts test.Multiply
 puts test.Add
 puts test.SubtractFrom100
+puts test.Add2
+puts test.DoesItExist
+puts test.HowMany
+puts test.FindAll
