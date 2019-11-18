@@ -21,14 +21,18 @@ class BasriModifyNumbers
         added
     end
     
+<<<<<<< HEAD
     def Add2
         @array.reduce(0) {|sum,n| sum+n}
     end
 
+=======
+>>>>>>> a4bf5e0eb8ce14194d7ad2069f66bf8513eb53ec
     def SubtractFrom100
         100 - self.Add
     end
     
+<<<<<<< HEAD
     def DoesItExist
       @array.any? { |item| item==@some_number_to_check }
     end
@@ -40,6 +44,8 @@ class BasriModifyNumbers
     def FindAll
       @array.find_all {|item| item==@some_number_to_check}
     end
+=======
+>>>>>>> a4bf5e0eb8ce14194d7ad2069f66bf8513eb53ec
 end
 
 sample_array = [1,2,3,4,5,6,4,44]
@@ -47,8 +53,12 @@ some_number_to_check = 4
 test = BasriModifyNumbers.new(sample_array,some_number_to_check)
 puts test.Multiply
 puts test.Add
+<<<<<<< HEAD
 puts test.SubtractFrom100
 puts test.Add2
 puts test.DoesItExist
 puts test.HowMany
 puts test.FindAll
+=======
+puts test.SubtractFrom100
+>>>>>>> a4bf5e0eb8ce14194d7ad2069f66bf8513eb53ec
